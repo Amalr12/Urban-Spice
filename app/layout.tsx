@@ -4,6 +4,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import "aos/dist/aos.css";
 import AosProvider from "./components/AosProvider";
+import Navbar from "./components/ui/Navbar";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}  h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-zinc-500">
+        <Navbar />
         <AosProvider>{children}</AosProvider>
       </body>
     </html>
