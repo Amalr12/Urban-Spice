@@ -1,12 +1,14 @@
 
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Navbar from "../../ui/Navbar";
 export default function Hero() {
 
 
   return (
-    <div className="flex flex-col flex-1  bg-zinc-50 font-sans " >
-         <div className="flex min-h-[60vh] md:min-h-screen   justify-center rounded-b-[4rem] rounded-t-none " style={{
+    <div className="flex flex-col flex-1  bg-zinc-50 font-sans relative h-screen " >
+         <Navbar />
+         <div className="flex min-h-[50vh] md:min-h-screen justify-center rounded-b-[4rem] rounded-t-none " style={{
         backgroundImage: "url('/moody-restaurant-interior-website-background.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -17,7 +19,7 @@ export default function Hero() {
                 
                 <h1 className="text-4xl md:text-6xl  text-gray-200 ">Taste the Art of Fine Dining</h1>
                 <p className="text-lg md:text-2xl text-gray-200 mb-8">Experience the finest dining with us.</p>
-                <button className="bg-red-900 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                <button className="border border-white rounded text-white font-bold py-2 px-4 rounded">
                   Make a Reservation
                 </button>
              </main>
