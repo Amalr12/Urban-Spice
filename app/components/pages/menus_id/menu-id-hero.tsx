@@ -30,7 +30,7 @@ export default function MenuIdHero({ title, description, mainImage,price }: Menu
             <p className="product-hero-description md:max-w-xl  ">{pageDescription}</p>
             <h1 className="product-hero-price md:text-3xl font-bold mt-2">₹{price}</h1>
           </div>
-
+ 
           <div className="relative w-full md:h-100 sm:h-80 h-60 ">
             <Image src={pageImage} alt={pageTitle} fill className="" />
           </div>
