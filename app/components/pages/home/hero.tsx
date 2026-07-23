@@ -6,7 +6,7 @@ export default function Hero() {
 
 
   return (
-    <div className="flex flex-col flex-1  bg-zinc-50 font-sans relative h-screen " >
+    <div className="flex flex-col flex-1   font-sans relative h-screen " >
          <Navbar />
          <div className="flex min-h-[50vh] md:min-h-screen justify-center rounded-b-[4rem] rounded-t-none " style={{
         backgroundImage: "url('/moody-restaurant-interior-website-background.webp')",
