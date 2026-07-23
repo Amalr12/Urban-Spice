@@ -9,9 +9,9 @@ export default function About() {
          <div className="flex min-h-[50vh] md:min-h-screen justify-center rounded-b-[4rem] rounded-t-none " 
         >
             <div className="absolute top-0 left-0 w-full h-[45%] bg-gradient-to-b from-black/90 to-transparent" ></div>
-                <main className="w-full z-10 flex flex-col items-center md:pt-30 px-4 md:px-8 lg:px-16" data-aos="fade-up" style={{ fontFamily: 'var(--font-onest)' }}>
+                <main className="w-full z-10 flex flex-col items-center md:pt-30 px-4 md:px-8 lg:px-16 " data-aos="fade-up" style={{ fontFamily: 'var(--font-onest)' }}>
 
-                <h1 className="text-4xl md:text-6xl   ">About <span className="text-red-900">Urban Spices</span></h1>
+                <h1 className="text-4xl md:text-6xl  z-50 ">About <span className="text-red-900">Urban Spices</span></h1>
                 <p className="text-lg md:text-2xl  mb-8">Learn more about our restaurant and our story.</p>
                
                 <div className="grid grid-cols-2 gap-4 mt-8">
