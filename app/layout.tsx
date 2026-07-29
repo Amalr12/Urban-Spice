@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import "aos/dist/aos.css";
 import AosProvider from "./components/AosProvider";
 import Navbar from "./components/ui/Navbar";
+import Footer from "./components/ui/footer";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col ">
         <Navbar />
         <AosProvider>{children}</AosProvider>
+        <Footer />
       </body>
     </html>
   );

@@ -37,7 +37,7 @@ export default function BookingPage() {
     <main>
 
       {/* Hero */}
-      <section className="relative h-[45vh] bg-[url('/booking.jpg')] bg-cover bg-center">
+      <section className="relative h-[45vh] bg-[url('/booking.jpg')] bg-cover bg-center mt-10 md:mt-5">
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative flex h-full items-center justify-center">
