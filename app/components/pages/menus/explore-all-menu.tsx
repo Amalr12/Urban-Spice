@@ -1,10 +1,22 @@
+"use client"; 
+import { useState } from "react";
 import { menus } from "../../../../data/each-menus";
+import SearchBar from "../../ui/searchbar";
 import MenuCard from "./menucard";
 
 
 export default function ExploreMenu() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const allMenus = menus
+  const query = searchQuery.trim().toLowerCase();
+  const filteredMenus = menus.filter((menu) => {
+    if (!query) return true;
+
+    const searchableText = `${menu.name} ${menu.category} ${menu.description}`.toLowerCase();
+    return searchableText.includes(query);
+  });
+
   return (
     <div className="py-20 bg-white p-5" id='explorecollection'>
 
@@ -18,9 +30,16 @@ export default function ExploreMenu() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-5 m-10">
+       <div className="w-full max-w-4xl mx-auto mb-6">
+              <SearchBar
+                searchTerm={searchTerm}
+                onSearchTermChange={setSearchTerm}
+                onSearch={() => setSearchQuery(searchTerm)}
+              />
+            </div>
 
-        {allMenus.map((menu) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-5 m-10 ">
+        {filteredMenus.map((menu) => (
           <MenuCard
             key={menu.id}
             title={menu.name}
