@@ -16,9 +16,17 @@ export default async function ProductPage({ params }: MenuHero) {
     notFound();
   }
 
+  const heroProps = {
+    title: menu.title ?? menu.name,
+    description: menu.description,
+    mainImage: menu.mainImage ?? menu.image?.[0],
+    price: menu.price,
+    id,
+  };
+
   return (
     <div className="bg-gray-100 h-full">
-      <MenuIdHero {...menu} />
+      <MenuIdHero {...heroProps} />
     </div>
   );
 }
