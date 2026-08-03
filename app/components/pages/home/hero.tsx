@@ -1,6 +1,5 @@
 
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 import Navbar from "../../ui/Navbar";
 export default function Hero() {
 
